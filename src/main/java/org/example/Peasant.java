@@ -1,10 +1,12 @@
 package src.main.java.org.example;
 
+import java.util.ArrayList;
+
 public class Peasant extends Npc {
 
-    public Peasant() {
+    public Peasant(ArrayList<Npc> group) {
         super(1,  1, 0, new int[]{1,1}, 1, 3, true, false, "");
-
+        super.group = group;
     }
 //    public Peasant(String name) {
 //        super(1,  1, 0, new int[]{1,1}, 1, 3, true, false, name);

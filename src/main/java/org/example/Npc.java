@@ -13,7 +13,8 @@ public abstract class Npc implements BaseInterface {
     Boolean delivery;
     Boolean magic;
     String name;
-    private ArrayList<Npc> group; // список
+    // добавляем Npc в абстрактый клас
+    protected ArrayList<Npc> group; // список своих на который пришлём указатель снаружи
 
 
     /**
