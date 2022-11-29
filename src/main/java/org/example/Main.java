@@ -5,16 +5,20 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Npc> list = new ArrayList<>();
-        list.add(new Peasant());
-        list.add(new Robber());
-        list.add(new Sniper());
-        list.add(new Wizard());
-        list.add(new Spearman());
-        list.add(new Xbowman());
-        list.add(new Monk());
+        ArrayList<Npc> darkside = new ArrayList<>();
+        ArrayList<Npc> lightside = new ArrayList<>();
+        darkside.add(new Peasant());
+        darkside.add(new Robber());
+        darkside.add(new Sniper());
+        darkside.add(new Wizard());
 
-        list.forEach(n -> System.out.println(n));
+        lightside.add(new Peasant());
+        lightside.add(new Spearman());
+        lightside.add(new Xbowman());
+        lightside.add(new Monk());
+
+        darkside.forEach(n -> System.out.println(n));
+        lightside.forEach(n -> System.out.println(n));
 //      System.out.println(list);
     }
 }

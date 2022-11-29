@@ -1,9 +1,9 @@
 package src.main.java.org.example;
-
+import java.util.ArrayList;
 /**
  * Базовый класс Npc для персонажа
  */
-public abstract class Npc {
+public abstract class Npc implements BaseInterface {
     int attack;
     int defense;
     int shots;
@@ -13,6 +13,7 @@ public abstract class Npc {
     Boolean delivery;
     Boolean magic;
     String name;
+    private ArrayList<Npc> group; // список
 
 
     /**
@@ -95,9 +96,20 @@ public abstract class Npc {
 //        this.name = name;
 //    }
 
-    @Override // переопределили toString, который наследуется из object
-    public String toString() {
-        return "attack=" + attack + " defense=" + defense + " shots=" + shots + " damage=" + damage[0] + "," + damage[1]
+//    @Override // переопределили toString, который наследуется из object
+//    public String toString() {
+//        return "attack=" + attack + " defense=" + defense + " shots=" + shots + " damage=" + damage[0] + ", " + damage[1]
+//                + " health=" + health + " speed=" + speed + " delivery=" + delivery + " magic=" + magic;
+//    }
+
+    public String getInfo() {
+        return "attack=" + attack + " defense=" + defense + " shots=" + shots + " damage=" + damage[0] + ", " + damage[1]
                 + " health=" + health + " speed=" + speed + " delivery=" + delivery + " magic=" + magic;
     }
+    @Override
+    public void Step() {
+
+    }
+
+
 }
